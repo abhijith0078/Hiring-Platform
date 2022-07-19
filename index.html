@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Techwind</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="left">
+        <nav class="navigator">
+          <div class="navigator__logo">
+            <ion-icon
+              name="keypad-outline"
+              class="navigator__logo__icon"
+            ></ion-icon>
+            <h3 class="heading-1 heading-1--primary">Tekwind</h3>
+          </div>
+
+          <ul class="navigator__nav" role="list">
+            <li class="active navigator__nav__item active">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="grid-outline"
+                  class="navigator__nav__item__icon"
+                >
+                </ion-icon>
+                Dashboard
+              </a>
+            </li>
+
+            <li class="navigator__nav__item">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="person-outline"
+                  class="navigator__nav__item__icon"
+                ></ion-icon>
+                Recruitment
+              </a>
+            </li>
+
+            <li class="navigator__nav__item">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="reader-outline"
+                  class="navigator__nav__item__icon"
+                >
+                </ion-icon>
+                Onboarding
+              </a>
+            </li>
+
+            <li class="navigator__nav__item">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="bulb-outline"
+                  class="navigator__nav__item__icon"
+                ></ion-icon>
+                <span>Tasks</span>
+              </a>
+            </li>
+
+            <li class="navigator__nav__item">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="calendar-clear-outline"
+                  class="navigator__nav__item__icon"
+                ></ion-icon>
+                <span>Calendar</span>
+              </a>
+            </li>
+
+            <li class="navigator__nav__item">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="settings-outline"
+                  class="navigator__nav__item__icon"
+                ></ion-icon>
+                <span>Settings</span>
+              </a>
+            </li>
+
+            <li class="navigator__nav__item">
+              <a href="#" class="navigator__nav__item__link">
+                <ion-icon
+                  name="log-out-outline"
+                  class="navigator__nav__item__icon"
+                ></ion-icon>
+                <span>logout</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="center">
+        <div class="center__header">
+          <h2 class="heading-2">Dashboard</h2>
+          <div class="center__search">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="search"
+              id="search"
+            />
+            <label for="search" class="header__icon-box">
+              <ion-icon class="header__icon" name="search-outline"></ion-icon>
+            </label>
+          </div>
+        </div>
+
+        <!-- filter section -->
+
+        <div class="filters">
+          <span class="filters-text">Filter by: </span>
+          <div class="filter">
+            <div class="filter_condition">
+              <span>Projects</span>
+              <ion-icon name="chevron-down-outline" class="down-arrow">
+              </ion-icon>
+            </div>
+            <div class="filter_condition">
+              <span>Skill</span>
+              <ion-icon name="chevron-down-outline" class="down-arrow">
+              </ion-icon>
+            </div>
+            <div class="filter_condition">
+              <span>Date</span>
+              <ion-icon name="chevron-down-outline" class="down-arrow">
+              </ion-icon>
+            </div>
+
+            <div class="filter_condition">
+              <span>Level</span>
+              <ion-icon name="chevron-down-outline" class="down-arrow">
+              </ion-icon>
+            </div>
+            <div class="filter_condition">
+              <span>Language</span>
+              <ion-icon name="chevron-down-outline" class="down-arrow">
+              </ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="main">
+          <div class="main__textbox">
+            <h3 class="heading-3 heading-3-light main__textbox--heading">
+              Hello Abhi!
+            </h3>
+            <p class="main__textbox__para">
+              You have 14 new applications. It is a lot of work for today! So
+              let's start.
+            </p>
+            <a href="#" class="main--link">review it.</a>
+          </div>
+          <div class="main__image">
+            <img
+              src="img/time-management.svg"
+              alt="Picture of a woman who try to manage time"
+              class="main__image__img"
+            />
+          </div>
+        </div>
+        <div class="hire">
+          <div class="hire-heading">
+            <h2 class="heading-2">You need to hire</h2>
+            <a href="#" class="normal-link hire-see-all">See all</a>
+          </div>
+          <div class="hire__info">
+            <div class="hire__info-box">
+              <span class="hire__info-box__number">4</span>
+              <div class="hire__info-box__role">
+                <h4 class="heading-4">Css developer</h4>
+                <span class="hire__info-box__role__candidates"
+                  >6 candidates</span
+                >
+              </div>
+              <div class="svg--box">
+                <svg class="circle-svg" width="6rem" height="6rem">
+                  <circle class="circle-bg" r="2.5rem" cx="3rem" cy="3rem" />
+                  <circle
+                    class="circle first-circle"
+                    r="2.5rem"
+                    cx="3rem"
+                    cy="3rem"
+                  />
+                </svg>
+                <span class="percentage--status">Selected</span>
+                <span class="percentage">67%</span>
+              </div>
+            </div>
+            <div class="hire__info-box">
+              <span class="hire__info-box__number">9</span>
+              <div class="hire__info-box__role">
+                <h4 class="heading-4">Javascript developer</h4>
+                <span class="hire__info-box__role__candidates"
+                  >14 candidates</span
+                >
+              </div>
+              <div class="svg--box">
+                <svg class="circle-svg" width="6rem" height="6rem">
+                  <circle class="circle-bg" r="2.5rem" cx="3rem" cy="3rem" />
+                  <circle
+                    class="circle second-circle"
+                    r="2.5rem"
+                    cx="3rem"
+                    cy="3rem"
+                  />
+                </svg>
+                <span class="percentage--status">Selected</span>
+                <span class="percentage">64%</span>
+              </div>
+            </div>
+            <div class="hire__info-box">
+              <span class="hire__info-box__number">8</span>
+              <div class="hire__info-box__role">
+                <h4 class="heading-4">Node.js developer</h4>
+                <span class="hire__info-box__role__candidates"
+                  >10 candidates</span
+                >
+              </div>
+              <div class="svg--box">
+                <svg class="circle-svg" width="6rem" height="6rem">
+                  <circle class="circle-bg" r="2.5rem" cx="3rem" cy="3rem" />
+                  <circle
+                    class="circle third-circle"
+                    r="2.5rem"
+                    cx="3rem"
+                    cy="3rem"
+                  />
+                </svg>
+                <span class="percentage--status">Selected</span>
+                <span class="percentage">80%</span>
+              </div>
+            </div>
+            <div class="hire__info-box">
+              <span class="hire__info-box__number">7</span>
+              <div class="hire__info-box__role">
+                <h4 class="heading-4">SQL developer</h4>
+                <span class="hire__info-box__role__candidates"
+                  >18 candidates</span
+                >
+              </div>
+              <div class="svg--box">
+                <svg class="circle-svg" width="6rem" height="6rem">
+                  <circle class="circle-bg" r="2.5rem" cx="3rem" cy="3rem" />
+                  <circle
+                    class="circle fourth-circle"
+                    r="2.5rem"
+                    cx="3rem"
+                    cy="3rem"
+                  />
+                </svg>
+                <span class="percentage--status">Selected</span>
+                <span class="percentage">39% </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="right">
+        <header class="right__header">
+          <ion-icon class="right__header__icon" name="notifications-outline">
+          </ion-icon>
+          <ion-icon
+            class="right__header__icon notification"
+            name="mail-outline"
+          >
+          </ion-icon>
+          <div class="user">
+            <img src="img/p-2.jpg" alt="user" class="user-img" />
+            <ion-icon name="chevron-down-outline" class="down-arrow"></ion-icon>
+          </div>
+        </header>
+        <div class="calendar">
+          <div class="calendar__head">
+            <ion-icon
+              class="calendar_icon"
+              name="chevron-back-outline"
+            ></ion-icon>
+
+            <h3 class="heading-3 heading-3-dark calendar-head-center">
+              Nov 2022
+            </h3>
+
+            <ion-icon
+              class="calendar_icon"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </div>
+          <div class="calendar__dates-grid">
+            <span class="day">Sun</span>
+            <span class="day">Mon</span>
+            <span class="day">Tue</span>
+            <span class="day">Wed</span>
+            <span class="day">Thu</span>
+            <span class="day">Fri</span>
+            <span class="day">Sat</span>
+            <span class="cell date">1</span><span class="cell date">2</span
+            ><span class="cell date">3</span><span class="cell date">4</span
+            ><span class="cell date">5</span><span class="cell date">6</span
+            ><span class="cell date">7</span><span class="cell date">8</span
+            ><span class="cell date">9</span><span class="cell date">10</span
+            ><span class="cell date">11</span><span class="cell date">12</span
+            ><span class="cell date">13</span><span class="cell date">14</span
+            ><span class="cell date">15</span><span class="cell date">16</span
+            ><span class="cell date">17</span><span class="cell date">18</span
+            ><span class="cell date">19</span><span class="cell date">20</span
+            ><span class="cell date">21</span><span class="cell date">22</span
+            ><span class="cell date">23</span><span class="cell date">24</span
+            ><span class="cell date">25</span><span class="cell date">26</span
+            ><span class="cell date">27</span><span class="cell date">28</span
+            ><span class="cell date">29</span><span class="cell date">30</span>
+          </div>
+        </div>
+        <div class="performers">
+          <div class="performers_header">
+            <h3 class="heading-2">Top performers</h3>
+            <a href="#" class="see-all normal-link">See all</a>
+          </div>
+          <div class="performers__list">
+            <div class="performer">
+              <img
+                src="img/p-1.jpg"
+                class="performer_img"
+                alt="top performer"
+              />
+              <div class="performer__info">
+                <span class="performer__info--name">John Snow</span>
+                <span class="performer__info--role">IoS app developer</span>
+              </div>
+              <span class="performer--score-varient green">+7.2%</span>
+              <span class="performer--score">98.0</span>
+            </div>
+            <div class="performer">
+              <img
+                src="img/p-3.jpg"
+                class="performer_img"
+                alt="top performer"
+              />
+              <div class="performer__info">
+                <span class="performer__info--name">Tiriyan Lani</span>
+                <span class="performer__info--role">Full stack developer</span>
+              </div>
+              <span class="performer--score-varient green">+10.5%</span>
+              <span class="performer--score">97.2</span>
+            </div>
+            <div class="performer">
+              <img
+                src="img/p-4.jpg"
+                class="performer_img"
+                alt="top performer"
+              />
+              <div class="performer__info">
+                <span class="performer__info--name">Khalisi </span>
+                <span class="performer__info--role">Java developer</span>
+              </div>
+              <span class="performer--score-varient red">-5.6%</span>
+              <span class="performer--score">95.0</span>
+            </div>
+            <div class="performer">
+              <img
+                src="img/p-5.jpg"
+                class="performer_img"
+                alt="top performer"
+              />
+              <div class="performer__info">
+                <span class="performer__info--name">Arya Stark</span>
+                <span class="performer__info--role">Node js developer</span>
+              </div>
+              <span class="performer--score-varient green">+15.7%</span>
+              <span class="performer--score">94.5</span>
+            </div>
+            <!-- <div class="performer">
+              <img
+                src="img/p-6.jpg"
+                class="performer_img"
+                alt="top performer"
+              />
+              <div class="performer__info">
+                <span class="performer__info--name">Jaimy L</span>
+                <span class="performer__info--role"
+                  >Machine learning expert</span
+                >
+              </div>
+              <span class="performer--score-varient red">-1.4%</span>
+              <span class="performer--score">94.0</span>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

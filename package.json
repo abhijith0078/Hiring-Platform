@@ -1,0 +1,14 @@
+{
+  "name": "03-techwind",
+  "version": "1.0.0",
+  "description": "hiring platform",
+  "main": "index.js",
+  "scripts": {
+    "run-sass": "node-sass scss/main.scss css/style.css -w"
+  },
+  "author": "abhijith",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

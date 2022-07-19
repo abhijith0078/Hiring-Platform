@@ -1,0 +1,29 @@
+.heading-1 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Philosopher", sans-serif;
+  &--primary {
+    color: var(--primary-color);
+  }
+}
+.heading-2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.heading-3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.heading-3-dark {
+  color: var(--primary-color) !important;
+}
+.heading-4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
