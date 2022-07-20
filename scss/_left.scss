@@ -1,8 +1,56 @@
 .left {
   display: flex;
-
+  // display: none;
   background-color: var(--white);
+  @media only screen and (max-width: 60.5em) {
+    & {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 60%;
+      height: 100%;
+      z-index: 10;
+    }
+  }
 }
+.checkbox-label {
+  display: none;
+  color: var(--gray-dark-1);
+}
+.checkbox {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+}
+.close {
+  display: none;
+}
+@media only screen and (max-width: 60.5em) {
+  .checkbox-label {
+    border: none;
+    background: none;
+    display: block;
+    position: absolute;
+    top: 6vh;
+    left: 2rem;
+    z-index: 9999;
+  }
+  .checkbox:checked + .checkbox-label .close {
+    display: block;
+  }
+  .checkbox:checked + .checkbox-label .menu {
+    display: none;
+  }
+  .nav-menu-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .checkbox:checked ~ .left {
+    display: block;
+  }
+}
+
 .navigator {
   display: flex;
   flex-direction: column;
@@ -10,11 +58,24 @@
   gap: 10vh;
   width: 90%;
   margin: 5vh auto;
+
+  @media only screen and (max-width: 60.5em) {
+    & {
+      width: 55%;
+      justify-content: center;
+    }
+  }
+
   &__logo {
     display: flex;
     gap: 1vw;
     align-items: center;
     padding-left: 2vw;
+    @media only screen and (max-width: 60.5em) {
+      & {
+        justify-content: center;
+      }
+    }
 
     &__icon {
       width: 2rem;
@@ -28,6 +89,7 @@
     flex-direction: column;
     flex: 1;
     gap: 1vh;
+
     &__item {
       position: relative;
       &:nth-child(7) {

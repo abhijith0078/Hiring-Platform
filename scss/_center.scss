@@ -5,6 +5,12 @@
 .center__header {
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 60.5em) {
+    & {
+      margin-left: 4rem;
+    }
+  }
 }
 // .center__search {
 //   width: 40%;
@@ -75,12 +81,14 @@
 }
 
 .center__search:hover > .search-input,
-.search-input:focus {
+.search-input:focus,
+.center__search:focus > .search-input {
   width: 100%;
   padding: 0.5em 1em;
 }
 
 .center__search:hover .header__icon,
+.center__search:focus .header__icon,
 .search-input:focus + .header__icon-box > .header__icon {
   background-color: var(--white);
   color: var(--primary-color);
@@ -97,6 +105,11 @@
     font-size: 1.4rem;
     color: var(--gray-dark-2);
   }
+  @media only screen and (max-width: 76em) {
+    & {
+      gap: 2vw;
+    }
+  }
 }
 .filter {
   display: flex;
@@ -109,6 +122,7 @@
     display: flex;
     align-items: center;
     gap: 0.5vw;
+    font-size: 1.2rem;
     padding: 0.3em 1.5em;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
     border-radius: 10rem;
@@ -128,6 +142,12 @@
   gap: 2vw;
   background-color: var(--primary-color);
   color: var(--white);
+
+  @media only screen and (max-width: 46em) {
+    & {
+      justify-content: space-evenly;
+    }
+  }
   &__textbox {
     flex: 2;
     &--heading {
@@ -145,6 +165,15 @@
     color: var(--white);
     border-bottom: 1px solid currentColor;
     font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 60.5em) {
+  .main__textbox {
+    margin-left: 2vw;
+    flex: 1.2;
+  }
+  .main__image {
+    flex: 1;
   }
 }
 .main__image {
@@ -257,7 +286,8 @@
   align-items: center;
 }
 .percentage--status {
-  font-size: 1.2rem;
+  margin-top: 0.6em;
+  font-size: 1rem;
   color: var(--gray-dark-1);
 }
 .percentage {
