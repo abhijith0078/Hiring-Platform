@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "description": "hiring platform",
   "main": "index.js",
+  "browserslist": "last 10 versions",
   "scripts": {
-    "run-sass": "node-sass scss/main.scss css/style.css -w"
+    "watch-sass": "node-sass scss/main.scss css/style.css -w",
+    "run-sass": "node-sass scss/main.scss css/style_compile.css",
+    "prefix:css": "postcss css/style_compile.css --use autoprefixer -o css/style_prefix.css",
+    "compress:css": "node-sass css/style_prefix.css css/style.css --output-style compressed"
   },
   "author": "abhijith",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0"
   }
 }
