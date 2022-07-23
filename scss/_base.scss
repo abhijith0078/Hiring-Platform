@@ -40,8 +40,9 @@ html {
       font-size: 50%;
     }
   }
-  @media only screen and (max-width: 46em) {
+  @media only screen and (max-width: 17.8em) {
     & {
+      font-size: 43.75%;
     }
   }
 }

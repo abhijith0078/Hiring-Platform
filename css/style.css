@@ -29,6 +29,9 @@ html {
   @media only screen and (max-width: 67em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 17.8em) {
+    html {
+      font-size: 43.75%; } }
 
 /* A elements that don't have a class get default styles */
 /* Make images easier to work with */
@@ -68,21 +71,19 @@ select {
       grid-template-columns: 1fr; } }
 
 .center {
-  background-color: #f1f1f1;
+  background-color: var(--bg-color);
   margin: 5vh 2vw 0 2vw; }
-
-.center__header {
-  display: flex;
-  align-items: center; }
-  @media only screen and (max-width: 60.5em) {
-    .center__header {
-      margin-left: 4rem; } }
-
-.center__search {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; }
+  .center__header {
+    display: flex;
+    align-items: center; }
+    @media only screen and (max-width: 60.5em) {
+      .center__header {
+        margin-left: 4rem; } }
+  .center__search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
 
 .search-input {
   outline: none;
@@ -106,6 +107,10 @@ select {
   padding: 0.5em;
   transition: 0.4s;
   transition-delay: 0.1s; }
+
+@media only screen and (max-width: 17.8em) {
+  .center__search {
+    display: none; } }
 
 .center__search:hover > .search-input,
 .search-input:focus,
@@ -200,6 +205,17 @@ select {
   width: 110%;
   height: 140%; }
 
+@media only screen and (max-width: 26em) {
+  .main {
+    flex-direction: column; }
+  .main__image {
+    display: flex;
+    justify-content: center; }
+  .main__image__img {
+    position: relative;
+    width: 20rem;
+    height: 20rem; } }
+
 .hire-heading {
   margin-top: 4vh;
   display: flex;
@@ -226,6 +242,9 @@ select {
     @media only screen and (max-width: 33.5em) {
       .hire__info-box {
         padding: 1vh 8vw; } }
+    @media only screen and (max-width: 14.6em) {
+      .hire__info-box {
+        flex-direction: column; } }
     .hire__info-box__number {
       font-size: 3.6rem;
       flex: 1; }
@@ -237,6 +256,21 @@ select {
       @media only screen and (max-width: 33.5em) {
         .hire__info-box__role {
           flex: 5; } }
+      @media only screen and (max-width: 17.8em) {
+        .hire__info-box__role {
+          text-align: center; } }
+
+.mobile-circle {
+  display: none; }
+
+@media only screen and (max-width: 17.8em) {
+  .circle-svg {
+    width: 50px !important;
+    height: 50px !important; }
+  .mobile-circle {
+    display: block; }
+  .circle-pc {
+    display: none; } }
 
 .svg--box {
   display: flex;
@@ -245,8 +279,7 @@ select {
 .circle {
   fill: none;
   stroke-width: 1rem;
-  stroke: var(--primary-color);
-  stroke-dasharray: 157; }
+  stroke: var(--primary-color); }
 
 .circle-bg {
   fill: none;
@@ -255,28 +288,60 @@ select {
   stroke-dasharray: 157; }
 
 .first-circle {
+  stroke-dasharray: 157;
   stroke-dashoffset: 51.81; }
   @supports (stroke-dashoffset: calc(157 - (157 * 67) / 100)) {
     .first-circle {
       stroke-dashoffset: calc(157 - (157 * 67) / 100); } }
 
 .second-circle {
+  stroke-dasharray: 157;
   stroke-dashoffset: 56.52; }
   @supports (stroke-dashoffset: calc(157 - (157 * 64) / 100)) {
     .second-circle {
       stroke-dashoffset: calc(157 - (157 * 64) / 100); } }
 
 .third-circle {
+  stroke-dasharray: 157;
   stroke-dashoffset: 31.4; }
   @supports (stroke-dashoffset: calc(157 - (157 * 80) / 100)) {
     .third-circle {
       stroke-dashoffset: calc(157 - (157 * 80) / 100); } }
 
 .fourth-circle {
+  stroke-dasharray: 157;
   stroke-dashoffset: 95.8; }
   @supports (stroke-dashoffset: calc(157 - (157 * 39) / 100)) {
     .fourth-circle {
       stroke-dashoffset: calc(157 - (157 * 39) / 100); } }
+
+.mob-first-circle {
+  stroke-dasharray: 125;
+  stroke-dashoffset: 41.25; }
+  @supports (stroke-dashoffset: calc(125 - (125 * 67) / 100)) {
+    .mob-first-circle {
+      stroke-dashoffset: calc(125 - (125 * 67) / 100); } }
+
+.mob-second-circle {
+  stroke-dasharray: 125;
+  stroke-dashoffset: 45; }
+  @supports (stroke-dashoffset: calc(125 - (125 * 64) / 100)) {
+    .mob-second-circle {
+      stroke-dashoffset: calc(125 - (125 * 64) / 100); } }
+
+.mob-third-circle {
+  stroke-dasharray: 125;
+  stroke-dashoffset: 25; }
+  @supports (stroke-dashoffset: calc(125 - (125 * 80) / 100)) {
+    .mob-third-circle {
+      stroke-dashoffset: calc(125 - (125 * 80) / 100); } }
+
+.mob-fourth-circle {
+  stroke-dasharray: 125;
+  stroke-dashoffset: 76.25; }
+  @supports (stroke-dashoffset: calc(125 - (125 * 39) / 100)) {
+    .mob-fourth-circle {
+      stroke-dashoffset: calc(125 - (125 * 39) / 100); } }
 
 .normal-link {
   text-decoration: none;
@@ -294,6 +359,9 @@ select {
   position: relative;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 14.6em) {
+    .svg--box {
+      margin: 0 auto; } }
 
 .percentage--status {
   margin-top: 0.6em;
@@ -320,6 +388,9 @@ select {
       right: 60%;
       height: 100%;
       z-index: 10; } }
+  @media only screen and (max-width: 33.5em) {
+    .left {
+      right: 20%; } }
 
 .checkbox-label {
   display: none;
@@ -341,7 +412,12 @@ select {
     position: absolute;
     top: 6vh;
     left: 2rem;
-    z-index: 9999; }
+    z-index: 9999; } }
+  @media only screen and (max-width: 60.5em) and (max-width: 17.8em) {
+    .checkbox-label {
+      top: 5.5vh; } }
+
+@media only screen and (max-width: 60.5em) {
   .checkbox:checked + .checkbox-label .close {
     display: block;
     position: fixed; }
@@ -356,6 +432,7 @@ select {
 .navigator {
   display: flex;
   flex-direction: column;
+  flex: 1 !important;
   gap: 10vh;
   width: 90%;
   margin: 5vh auto; }
@@ -363,7 +440,7 @@ select {
     .navigator {
       width: 55%;
       justify-content: space-between;
-      gap: 2vw;
+      gap: 4vh;
       margin: 5vh auto 0 auto; } }
   .navigator__logo {
     display: flex;
@@ -379,6 +456,7 @@ select {
       color: var(--primary-color);
       flex-shrink: 0; }
   .navigator__nav {
+    justify-self: flex-end;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -631,6 +709,10 @@ select {
 .heading-2 {
   font-size: 1.6rem;
   font-weight: 500; }
+  @media only screen and (max-width: 26em) {
+    .heading-2-v {
+      font-weight: 400;
+      font-size: 1.8rem; } }
 
 .heading-3 {
   font-size: 1.6rem;

@@ -2,6 +2,7 @@
   display: flex;
   // display: none;
   background-color: var(--white);
+
   @media only screen and (max-width: 60.5em) {
     & {
       display: none;
@@ -11,6 +12,11 @@
       right: 60%;
       height: 100%;
       z-index: 10;
+    }
+  }
+  @media only screen and (max-width: 33.5em) {
+    & {
+      right: 20%;
     }
   }
 }
@@ -35,6 +41,11 @@
     top: 6vh;
     left: 2rem;
     z-index: 9999;
+    @media only screen and (max-width: 17.8em) {
+      & {
+        top: 5.5vh;
+      }
+    }
   }
   .checkbox:checked + .checkbox-label .close {
     display: block;
@@ -55,7 +66,7 @@
 .navigator {
   display: flex;
   flex-direction: column;
-
+  flex: 1 !important;
   gap: 10vh;
   width: 90%;
   margin: 5vh auto;
@@ -64,7 +75,7 @@
     & {
       width: 55%;
       justify-content: space-between;
-      gap: 2vw;
+      gap: 4vh;
       margin: 5vh auto 0 auto;
     }
   }
@@ -88,6 +99,7 @@
     }
   }
   &__nav {
+    justify-self: flex-end;
     display: flex;
     flex-direction: column;
     flex: 1;
