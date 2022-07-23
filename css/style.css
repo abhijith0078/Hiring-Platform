@@ -32,6 +32,9 @@ html {
   @media only screen and (max-width: 17.8em) {
     html {
       font-size: 43.75%; } }
+  @media only screen and (max-width: 14em) {
+    html {
+      font-size: 37.5%; } }
 
 /* A elements that don't have a class get default styles */
 /* Make images easier to work with */
@@ -435,7 +438,7 @@ select {
   flex: 1 !important;
   gap: 10vh;
   width: 90%;
-  margin: 5vh auto; }
+  margin: 5vh 2vw; }
   @media only screen and (max-width: 60.5em) {
     .navigator {
       width: 55%;
@@ -460,7 +463,8 @@ select {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 1vh; }
+    gap: 1vh;
+    font-size: 1.3rem; }
     .navigator__nav__item {
       position: relative; }
       .navigator__nav__item-msg {

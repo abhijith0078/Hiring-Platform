@@ -45,6 +45,11 @@ html {
       font-size: 43.75%;
     }
   }
+  @media only screen and (max-width: 14em) {
+    & {
+      font-size: 37.5%;
+    }
+  }
 }
 
 /* A elements that don't have a class get default styles */
