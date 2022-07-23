@@ -6,6 +6,8 @@
   @media only screen and (max-width: 46em) {
     & {
       flex-direction: row;
+      margin: 4vh 2vw 0 2vw;
+      gap: 3vw;
     }
   }
 
@@ -66,9 +68,28 @@
         transition: all 0.2s;
       }
     }
+    @media only screen and (max-width: 46em) {
+      & {
+        display: none;
+      }
+    }
   }
 }
+
 .calendar {
+  @media only screen and (max-width: 46em) {
+    & {
+      flex: 1;
+      order: 1;
+      align-self: flex-start;
+      margin-top: 6.5rem;
+    }
+  }
+  @media only screen and (max-width: 33.5em) {
+    & {
+      display: none;
+    }
+  }
   border-radius: var(--border-radius);
   margin-top: 2vh;
   background-color: var(--white);
@@ -136,6 +157,12 @@
   flex: 1;
   &_header {
     display: flex;
+    align-items: center;
+  }
+  @media only screen and (max-width: 46em) {
+    & {
+      flex: 2;
+    }
   }
 }
 .see-all {
@@ -148,6 +175,11 @@
   flex-direction: column;
 
   justify-content: space-between;
+  @media only screen and (max-width: 46em) {
+    & {
+      gap: 1vh;
+    }
+  }
 
   .performer {
     border-radius: var(--border-radius);
@@ -163,8 +195,13 @@
     }
     @media only screen and (max-width: 46em) {
       & {
-        // gap: 0.5vw;
-        // padding: 1.3vh;
+        padding: 2vh;
+      }
+    }
+    @media only screen and (max-width: 33.5em) {
+      & {
+        padding-inline: 8vw;
+        gap: 4vw;
       }
     }
 
@@ -172,6 +209,12 @@
       width: 3.3rem;
       height: 3.3rem;
       border-radius: 50%;
+      @media only screen and (max-width: 33.5em) {
+        & {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
     }
     &__info {
       flex: 4;

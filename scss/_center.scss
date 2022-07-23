@@ -100,7 +100,11 @@
   display: flex;
   align-items: center;
   gap: 5vw;
-
+  @media only screen and (max-width: 33.5em) {
+    & {
+      display: none;
+    }
+  }
   &-text {
     font-size: 1.4rem;
     color: var(--gray-dark-2);
@@ -195,6 +199,7 @@
   &-heading {
     margin-top: 4vh;
     display: flex;
+    align-items: center;
   }
   &-see-all {
     margin-left: auto;
@@ -205,12 +210,23 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3vw;
     row-gap: 2vh;
+
+    @media only screen and (max-width: 33.5em) {
+      & {
+        grid-template-columns: 1fr;
+      }
+    }
     &-box {
       padding: 0.5em 1em;
       background-color: #fff;
       border-radius: var(--border-radius);
       display: flex;
       align-items: center;
+      @media only screen and (max-width: 33.5em) {
+        & {
+          padding: 1vh 8vw;
+        }
+      }
       &__number {
         font-size: 3.6rem;
         flex: 1;
@@ -220,6 +236,11 @@
         &__candidates {
           font-size: 1.2rem;
           color: var(--gray-dark-1);
+        }
+        @media only screen and (max-width: 33.5em) {
+          & {
+            flex: 5;
+          }
         }
       }
     }
